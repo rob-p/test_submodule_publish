@@ -355,6 +355,6 @@ fi
 
 if [ $VERBOSE -eq 1 ]; then 
     echo "computing sha256 of the tarball"
-    shasum -a 256 ${OUT_FILE} > ${OUT_FILE}.sha256
 fi
+shasum -a 256 ${OUT_FILE} > ${OUT_FILE}.sha256
 
