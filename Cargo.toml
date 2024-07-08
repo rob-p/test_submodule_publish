@@ -1,7 +1,7 @@
 [package]
 repository = "https://github.com/rob-p/test_submodule_publish"
 name = "test_submodule_publish"
-version = "0.2.0"
+version = "0.3.0"
 edition = "2021"
 
 [dependencies]
@@ -25,10 +25,12 @@ targets = ["aarch64-apple-darwin", "x86_64-apple-darwin", "x86_64-unknown-linux-
 pr-run-mode = "plan"
 # Whether to install an updater program
 install-updater = true
+# Generate and dist a source tarball
+source-tarball = false
 
 [[workspace.metadata.dist.extra-artifacts]]
-artifacts = ["source_recursive.tar.gz"]
-build = ["bash", "scripts/git-archive-all.sh", "--format", "tar.gz", "--prefix", "test_submodule_publish/", "source_recursive.tar.gz"]
+artifacts = ["source.tar.gz"]
+build = ["bash", "scripts/git-archive-all.sh", "--format", "tar.gz", "--prefix", "test_submodule_publish/", "source.tar.gz"]
 
 [workspace.metadata.dist.dependencies.homebrew]
 gnu-tar = { stage = ["build"] }
