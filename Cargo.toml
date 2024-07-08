@@ -32,3 +32,4 @@ build = ["bash", "scripts/git-archive-all.sh", "--format", "tar.gz", "--prefix",
 
 [workspace.metadata.dist.dependencies.homebrew]
 gnu-tar = { stage = ["build"] }
+coreutils = { stage = ["build"] }
