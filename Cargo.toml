@@ -28,7 +28,7 @@ install-updater = true
 
 [[workspace.metadata.dist.extra-artifacts]]
 artifacts = ["source_recursive.tar.gz"]
-build = ["bash", "scripts/git-archive-all.sh", "--format tar.gz", "--prefix test_submodule_publish/", "source_recursive.tar.gz"]
+build = ["bash", "scripts/git-archive-all.sh", "--format", "tar.gz", "--prefix", "test_submodule_publish/", "source_recursive.tar.gz"]
 
 [workspace.metadata.dist.dependencies.homebrew]
 gnu-tar = { stage = ["build"] }
