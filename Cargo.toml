@@ -1,7 +1,7 @@
 [package]
 repository = "https://github.com/rob-p/test_submodule_publish"
 name = "test_submodule_publish"
-version = "0.4.0"
+version = "0.4.1"
 edition = "2021"
 
 [dependencies]
@@ -35,3 +35,7 @@ build = ["bash", "scripts/git-archive-all.sh", "--format", "tar.gz", "--prefix",
 [workspace.metadata.dist.dependencies.homebrew]
 gnu-tar = { stage = ["build"] }
 coreutils = { stage = ["build"] }
+
+[workspace.metadata.dist.dependencies.apt]
+shasum = { stage = ["build"] }
+
